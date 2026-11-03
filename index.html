@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BagitudeMart | Your Bag Store</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f6f2;
+            color: #222;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+        }
+
+        .hero button {
+            background-color: #222;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+        /* Products section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 30px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Arrange products in a grid */
+.product-container {
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 15px 5px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+    flex: 0 0 280px;
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+/* Individual product card */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+}
+
+.price {
+    color: #26734d;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Premium WhatsApp order button */
+.order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 12px;
+    margin-top: 18px;
+
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(18, 140, 126, 0.22);
+
+    transition: all 0.25s ease;
+}
+
+.order-button:hover {
+    background: linear-gradient(135deg, #20bd5a, #0e756a);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(18, 140, 126, 0.35);
+}
+
+.order-button:active {
+    transform: scale(0.97);
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 700px) {
+    .product-card {
+        flex-basis: 250px;
+    }
+}
+
+.whatsapp-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.button-arrow {
+    font-size: 20px;
+    margin-left: auto;
+    transition: transform 0.25s ease;
+}
+
+.order-button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+.product-card img {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.03);
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BagitudeMart</h1>
+        <p>Your Style, Your Bag</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h2><em>Find Your Perfect Bag</em></h2>
+        <p>Discover stylish bags for every occasion.</p>
+        <button onclick="alert('Welcome to BagitudeMart!')">
+            Explore Now
+        </button>
+    </section>
+
+    <section id="products" class="products">
+    <h2>Our Collection</h2>
+    <p class="section-description">
+        <em><b>Find the perfect bag for your style.</b></em>
+    </p>
+
+    <div class="product-container">
+
+        <div class="product-card">
+    <a href="labubu.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Labubu Bp maroon.jpeg"
+         alt="Labubu Maroon Backpack">
+</a>
+
+    <h3>Labubu Maroon Backpack</h3>
+    <p class="price">Rs. 2,800</p>
+
+    <a class="order-button"
+       href="https://wa.me/94769677138?text=Hi%2C%20I%20am%20interested%20in%20the%20Labubu%20Maroon%20Backpack%20priced%20at%20Rs.%202800."
+       target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+    </a>
+</div>
+
+<div class="product-card">
+    <a href="SR 11.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\HB SR11 Pink.jpeg"
+         alt="Labubu Maroon Backpack">
+</a>
+
+    <h3>KeyTag HB Pink</h3>
+    <p class="price">Rs. 2,300</p>
+
+    <a class="order-button"
+       href="https://wa.me/94769677138?text=Hi%2C%20I%20am%20interested%20in%20the%20KeyTag%20HB%20Pink%20priced%20at%20Rs.%202,300/=."
+       target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+    </a>
+</div>
+
+<div class="product-card">
+    <a href="New BP.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Blue BP.jpeg"
+         alt="New BackPack">
+</a>
+
+    <h3>WANGHAO BackPack</h3>
+    <p class="price">Rs. 2,300/=</p>
+
+    <a class="order-button"
+       href="https://wa.me/94769677138?text=Hi%2C%20I%20am%20interested%20in%20the%20New%20Blue%20BackPack%20priced%20at%20Rs.%202,700/=."
+       target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+    </a>
+</div>
+
+<div class="product-card">
+    <a href="Labubu class.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Labubu SB L.Blue.jpeg"
+         alt="Labubu SideBag">
+</a>
+
+    <h3>Labubu SideBag</h3>
+    <p class="price">Rs. 2,250/=</p>
+
+    <a class="order-button"
+       href="https://wa.me/94769677138?text=Hi%2C%20I%20am%20interested%20in%20the%20New%20Labubu%20SideBag%20priced%20at%20Rs.%202,250/=."
+       target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+    </a>
+    </div>
+
+    <div class="product-card">
+    <a href="Sunflower BP.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\SF BP Pink.png"
+         alt="Labubu SideBag">
+</a>
+
+    <h3>SunFlower BackPack</h3>
+    <p class="price">Rs. 1,800/=</p>
+
+    <a class="order-button"
+       href="https://wa.me/94769677138?text=Hi%2C%20I%20am%20interested%20in%20the%20New%20SunFlower%20BackPack%20priced%20at%20Rs.%201,800/=."
+       target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+    </a>
+    </div>
+
+    </div>
+</section>
+
+    <footer id="contact">
+        <p>Welcome to BagitudeMart</p>
+        <p>Contact us to place your order.</p>
+    </footer>
+    
+<!-- Product Photo Gallery -->
+<div id="gallery" class="gallery">
+    <button class="gallery-close" onclick="closeGallery()">✕</button>
+    <button class="gallery-prev" onclick="changePhoto(-1)">❮</button>
+
+    <img id="gallery-image" src="" alt="Product photo">
+
+    <button class="gallery-next" onclick="changePhoto(1)">❯</button>
+    <p id="gallery-count"></p>
+</div>
+</body>
+
+</body>
+</html>
