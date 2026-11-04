@@ -195,6 +195,42 @@
 .product-card img:hover {
     transform: scale(1.03);
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #222;
+}
+
+.search-container button {
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #444;
+}
     </style>
 </head>
 
