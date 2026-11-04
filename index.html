@@ -375,7 +375,25 @@
     <button class="gallery-next" onclick="changePhoto(1)">❯</button>
     <p id="gallery-count"></p>
 </div>
-</body>
+
+    <script>
+function searchProducts() {
+    const input = document.getElementById("productSearch");
+    const searchText = input.value.toLowerCase();
+
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+        const productName = product.innerText.toLowerCase();
+
+        if (productName.includes(searchText)) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>
