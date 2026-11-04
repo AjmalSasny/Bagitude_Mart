@@ -378,15 +378,16 @@
 
     <script>
 function searchProducts() {
-    const input = document.getElementById("productSearch");
-    const searchText = input.value.toLowerCase();
+    const searchText = document
+        .getElementById("productSearch")
+        .value.trim().toLowerCase();
 
     const products = document.querySelectorAll(".product-card");
 
     products.forEach(function(product) {
-        const productName = product.innerText.toLowerCase();
+        const name = product.querySelector("h3").textContent.toLowerCase();
 
-        if (productName.includes(searchText)) {
+        if (name.includes(searchText)) {
             product.style.display = "";
         } else {
             product.style.display = "none";
