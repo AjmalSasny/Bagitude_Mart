@@ -8,10 +8,21 @@
 
     <style>
         body {
+
+
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f8f6f2;
-            color: #222;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("Bag Photos/Bg pic 2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #f7f8f9;
         }
 
         header {
@@ -45,10 +56,12 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
+            color:#f4f4f5
         }
 
         .hero h2 {
             font-size: 36px;
+            color:#f7f8f9
         }
 
         .hero button {
@@ -63,20 +76,24 @@
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 18px;
+            padding: 10px 18px;
+            margin: 0;
         }
         /* Products section */
 .products {
-    padding: 40px 20px;
+    padding: 40px 20px 10px;
+    margin-bottom: 0;
     text-align: center;
+    color: #64676a;
 }
 
 .products h2 {
     font-size: 30px;
+    color:#f4f4f5
 }
 
 .section-description {
-    color: #666;
+    color: #fbf9f9;
     margin-bottom: 30px;
 }
 
@@ -195,42 +212,6 @@
 .product-card img:hover {
     transform: scale(1.03);
 }
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 0 15px;
-}
-
-.search-container input {
-    flex: 1;
-    min-width: 0;
-    padding: 13px 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-}
-
-.search-container input:focus {
-    border-color: #222;
-}
-
-.search-container button {
-    padding: 12px 20px;
-    background: #222;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.search-container button:hover {
-    background: #444;
-}
     </style>
 </head>
 
@@ -261,25 +242,11 @@
         <em><b>Find the perfect bag for your style.</b></em>
     </p>
 
-    <div class="search-container">
-    
-        <input
-        type="text"
-        id="productSearch"
-        placeholder="Search for bags..."
-        onkeyup="searchProducts()"
-        >
-        <button onclick="searchProducts()">🔍 Search</button>
-    
-    </div>
-
-
-        
     <div class="product-container">
 
         <div class="product-card">
-    <a href="Labubu.html">
-    <img src="Bag Photos/Labubu BP maroon.jpeg"
+    <a href="labubu.html">
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Labubu Bp maroon.jpeg"
          alt="Labubu Maroon Backpack">
 </a>
 
@@ -295,7 +262,7 @@
 
 <div class="product-card">
     <a href="SR 11.html">
-    <img src="Bag Photos\HB SR11 Pink.jpeg"
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\HB SR11 Pink.jpeg"
          alt="Labubu Maroon Backpack">
 </a>
 
@@ -311,7 +278,7 @@
 
 <div class="product-card">
     <a href="New BP.html">
-    <img src="Bag Photos\Blue BP.jpeg"
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Blue BP.jpeg"
          alt="New BackPack">
 </a>
 
@@ -327,7 +294,7 @@
 
 <div class="product-card">
     <a href="Labubu class.html">
-    <img src="Bag Photos\Labubu SB L.Blue.jpeg"
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\Labubu SB L.Blue.jpeg"
          alt="Labubu SideBag">
 </a>
 
@@ -343,7 +310,7 @@
 
     <div class="product-card">
     <a href="Sunflower BP.html">
-    <img src="Bag Photos\SF BP Pink.png"
+    <img src="C:\Users\Welcome\Desktop\BagitudeMart\Bag Photos\SF BP Pink.png"
          alt="Labubu SideBag">
 </a>
 
@@ -375,26 +342,5 @@
     <button class="gallery-next" onclick="changePhoto(1)">❯</button>
     <p id="gallery-count"></p>
 </div>
-
-    <script>
-function searchProducts() {
-    const searchText = document
-        .getElementById("productSearch")
-        .value.trim().toLowerCase();
-
-    const products = document.querySelectorAll(".product-card");
-
-    products.forEach(function(product) {
-        const name = product.querySelector("h3").textContent.toLowerCase();
-
-        if (name.includes(searchText)) {
-            product.style.display = "";
-        } else {
-            product.style.display = "none";
-        }
-    });
-}
-</script>
-
 </body>
 </html>
